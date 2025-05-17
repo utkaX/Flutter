@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 
 // explore pub.dev website for more widgets
 // also we can use fonts from google fonts from pub.dev
 // it has build in library
 
 class Login extends StatelessWidget {
+  const Login({super.key});
+
   // const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      child: Column(
+      child: SingleChildScrollView(	
+        child:Column(
         children: [
           Image.asset('./assests/images/login_image.png', fit: BoxFit.cover),
           Text(
@@ -39,14 +43,14 @@ class Login extends StatelessWidget {
                     labelText: "Password",                    
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 60),
 
                 ElevatedButton(onPressed: () {
-                  Navigator.pushNamed(context, "/home");
+                  Navigator.pushNamed(context, MyRoutes.homeRoute);
                   }, 
                   style: TextButton.styleFrom(
-                    minimumSize: Size(150, 40),
-                    backgroundColor: const Color.fromARGB(255, 49, 68, 216),
+                    minimumSize: Size(150, 60),
+                    backgroundColor: const Color.fromARGB(255, 76, 93, 219),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -55,7 +59,7 @@ class Login extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black
+                      color: Colors.black,
                     ),
                   ),
                   ),
@@ -66,6 +70,7 @@ class Login extends StatelessWidget {
             ),
           ),
         ],
+      ),
       ),
     );
   }

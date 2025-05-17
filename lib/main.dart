@@ -2,19 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
+import '../utils/routes.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
- 
+  // const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       // home: Home(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
@@ -22,22 +24,14 @@ class MyApp extends StatelessWidget {
         primaryTextTheme: GoogleFonts.latoTextTheme(),
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark
-      ),
-      initialRoute: "/",
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: MyRoutes.loginRoute,
       routes: {
-        "/":(context)=>Login(),
-        "/home":(context)=>Home()
-
+        MyRoutes.loginRoute: (context) => Login(),
+        MyRoutes.homeRoute: (context) => Home(),
       },
     );
   }
 
-
-
-  func({required int rup})
-  {
-
-  }
+  func({required int rup}) {}
 }
