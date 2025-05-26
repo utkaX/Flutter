@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title:Center(
-          child: Text("Day 2 of practice"),
+          child: Text("Catalog App"),
            ),
       ),
       body: Center(

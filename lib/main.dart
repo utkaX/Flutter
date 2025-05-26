@@ -23,6 +23,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
         primaryTextTheme: GoogleFonts.latoTextTheme(),
         fontFamily: GoogleFonts.lato().fontFamily,
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          titleTextStyle: TextStyle(
+            fontSize: 20,
+            fontFamily: GoogleFonts.lato().fontFamily,
+            color: Colors.black,
+           
+          ),
+          backgroundColor: Colors.white,
+        ),
       ),
       darkTheme: ThemeData(brightness: Brightness.dark),
       initialRoute: MyRoutes.homeRoute,
